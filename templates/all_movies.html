@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+  <div class="col">
+    <p class="heading theme-font">All Movies</p>
+  </div>
+</div>
+
+<div class="row">
+  <div
+    class="col d-flex flex-row justify-content-around align-items-center buttons-row"
+  >
+    <div class="option">
+      <a href="{{ url_for('by_genre') }}">By Genre</a>
+    </div>
+    <div class="option">
+      <a href="{{ url_for('by_year') }}">By Year</a>
+    </div>
+    <div class="option">
+      <a href="{{ url_for('by_rating') }}">By Rating</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="offset-1 col-10">
+    <div class="d-flex justify-content-evenly align-items-stretch flex-wrap">
+      {% for movie in movies %}
+      <div class="card cards">
+        <a href="#">
+          <img class="card-img-top" src="{{movie[6]}}" alt="Card image cap" />
+        </a>
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <p class="card-text">
+            <span class="mob-title">{{ movie[1] }} {{ movie[2]}}</span>
+            <span
+              >{% if movie[3] == 'U' %}
+              <img
+                src="../static/u.png"
+                class="age-certificate"
+                alt="Universal age certificate"
+              />
+              {% elif movie[3] == 'PG'%}
+              <img
+                src="../static/pg.png"
+                class="age-certificate"
+                alt="Parental guidance age certificate"
+              />
+              {% elif movie[3]== '12'%}
+              <img
+                src="../static/12.png"
+                class="age-certificate"
+                alt="12 age certificate"
+              />
+              {% elif movie[3] == '15'%}
+              <img
+                src="../static/15.png"
+                class="age-certificate"
+                alt="15 age certificate"
+              />
+              {% elif movie[3] == '18'%}
+              <img
+                src="../static/18.png"
+                class="age-certificate"
+                alt="18 age certificate"
+              />
+              {%endif %}</span
+            >
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,191 @@
+body{
+    background-color:black;
+    background-image:url(../static/bkg2.png);
+    background-repeat:repeat;
+    max-width:100vw;
+    max-height:100vh;
+}
+.container{
+    max-width:90%;
+    min-height:80vh;
+    background-color:black;
+    color:white;
+    text-align:center;
+    margin-bottom:10vh;
+}
+
+.theme-font{
+    font-family: 'Fredoka One', cursive;
+}
+
+.heading{
+    font-size:2rem;
+    margin-top: 2rem;
+}
+
+img{
+    width:100%;
+}
+
+
+.option, .home-options{
+    background-color: #00CECB;
+    color:black;
+    font-family: 'Fredoka One';
+    border-radius: 1rem;
+}
+
+.option:hover{
+    cursor:pointer;
+}
+
+.option{ 
+    font-size:1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.home-options{
+    font-size: 2rem;
+    padding: 0.6rem;
+    margin: 1.2rem;
+    min-width:90%;
+}
+
+.home-options a, .option a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.cards{
+    width:48%;
+    border:#00CECB solid 1px;
+    color: white;
+    background-color: black;
+    margin:3px;
+    margin-bottom:1rem;
+}
+
+.card-body{
+    padding-bottom: 0 !important;
+}
+
+.mob-title{
+    font-weight:800;
+}
+
+.mob-genre{
+    font-size:0.8rem;
+}
+.hide{
+    display:none;
+}
+
+.age-certificate{
+    width:2rem;
+    height:2rem;
+    float:right;
+}
+
+.buttons-row{
+    margin-bottom:2rem;
+}
+
+.navigation a{
+    text-decoration:none;
+    color:white;
+    font-size:1.5rem;
+    transition: font-size 1s;
+}
+
+.navigation a:hover{
+    color:#00CECB;
+    font-size:2rem;
+}
+
+.navigation{
+    border-bottom: #00CECB solid 1px;
+}
+
+.logo-text{
+    font-size:2rem;
+    position: relative;
+    top: 25px;
+}
+.movie-logo{
+    background-image:url(../static/logo.png);
+    background-size: cover;
+    margin-right: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    float:left;
+}
+
+/*   TABLET   */
+@media only screen and (min-width: 600px) {
+
+    .heading{
+        font-size:4rem;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .welcome{
+        margin: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .option{
+        font-size: 1.5rem;
+        padding:1rem;
+        margin:1.3rem;
+    }
+
+    .container{
+        max-width:90%;
+    }
+
+    .mob-title{
+        font-size:1.2rem;
+    }
+
+    .cards{
+        width:30%;
+    }
+
+    
+}
+
+@media only screen and (min-width:850px){
+    .cards{
+        width:24%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .heading{
+        font-size:4rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    
+    .age-certificate{
+        width:3rem;
+        height:3rem;
+    }
+
+    .option{
+        font-size:2rem;
+    }
+
+    .mob-title{
+        font-size:2rem;
+    }
+
+    .cards{
+        width:24%;
+        margin-left: 0.3rem;
+    }
+}
+

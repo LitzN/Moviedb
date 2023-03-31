@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  BOOTSTRAP   -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!--  GOOGLE FONTS    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <!--  CUSTOM STYLE SHEET    -->
+    <link rel="stylesheet" href="../static/style.css" />
+    {% block head %} {% endblock %}
+    <title>MovieDB</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row theme-font">
+        <div
+          class="col-12 d-flex flex-row justify-content-around align-items-center navigation pt-4 pb-3"
+        >
+          <a href="{{ url_for('home') }}">
+            <div class="movie-logo d-inline"></div>
+            <p class="d-inline logo-text theme-font">MovieDB</p>
+          </a>
+          <a href="{{ url_for('all_movies')}}">
+            <div class="nav-btn">View All</div></a
+          >
+          <a href="{{ url_for('by_genre') }}"
+            ><div class="nav-btn">By Genre</div></a
+          >
+          <a href="{{ url_for('by_year') }}"
+            ><div class="nav-btn">By Year</div></a
+          >
+          <a href="{{ url_for('by_rating') }}"
+            ><div class="nav-btn">By Rating</div></a
+          >
+        </div>
+      </div>
+      {% block content %} {% endblock %}
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="../static/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+body{
+    max-height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    margin-top:5vh;
+    min-height:0;
+    max-width:85%;
+}
+
+.heading{
+    margin:1rem;
+}
+
+.watchers{
+    width:90%;
+}
+
+.welcome{
+    font-size:1.5rem;
+}
+
+.navigation{
+    display:none !important;
+}
