@@ -27,6 +27,9 @@ img{
     width:100%;
 }
 
+.welcome{
+    font-size:1rem;
+}
 
 .option, .home-options{
     background-color: #00CECB;
@@ -46,9 +49,9 @@ img{
 }
 
 .home-options{
-    font-size: 2rem;
-    padding: 0.6rem;
-    margin: 1.2rem;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    margin: 0.3rem;
     min-width:90%;
 }
 
@@ -59,7 +62,6 @@ img{
 
 
 .cards{
-    width:48%;
     border:#00CECB solid 1px;
     color: white;
     background-color: black;
@@ -95,13 +97,13 @@ img{
 .navigation a{
     text-decoration:none;
     color:white;
-    font-size:1.5rem;
+    font-size:1rem;
     transition: font-size 1s;
 }
 
 .navigation a:hover{
     color:#00CECB;
-    font-size:2rem;
+    font-size:1.3rem;
 }
 
 .navigation{
@@ -109,7 +111,7 @@ img{
 }
 
 .logo-text{
-    font-size:2rem;
+    font-size:1.2rem;
     position: relative;
     top: 25px;
 }
@@ -125,21 +127,28 @@ img{
 /*   TABLET   */
 @media only screen and (min-width: 600px) {
 
+    .logo-text{
+        font-size:2rem;
+    }
+
     .heading{
-        font-size:4rem;
-        margin-top: 3rem;
+        font-size:3rem;
+        margin-top: 2.5rem;
         margin-bottom: 2.5rem;
     }
 
-    .welcome{
-        margin: 1.5rem;
-        font-size: 2rem;
+    .navigation a {
+        font-size:1.5rem;
+    }
+
+    .navigation a:hover{
+        font-size:2rem;
     }
 
     .option{
         font-size: 1.5rem;
         padding:1rem;
-        margin:1.3rem;
+        margin:1rem;
     }
 
     .container{
@@ -165,9 +174,9 @@ img{
 
 @media only screen and (min-width: 1200px) {
     .heading{
-        font-size:4rem;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+        font-size: 3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
     }
     
     .age-certificate{
@@ -176,7 +185,7 @@ img{
     }
 
     .option{
-        font-size:2rem;
+        margin:0.5rem;
     }
 
     .mob-title{

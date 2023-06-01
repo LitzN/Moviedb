@@ -31,19 +31,19 @@
         >
           <a href="{{ url_for('home') }}">
             <div class="movie-logo d-inline"></div>
-            <p class="d-inline logo-text theme-font">MovieDB</p>
+            <p class="d-sm-inline d-block logo-text theme-font">MovieDB</p>
           </a>
           <a href="{{ url_for('all_movies')}}">
-            <div class="nav-btn">View All</div></a
+            <div class="nav-btn"><span class="d-none d-lg-inline">View</span> All</div></a
           >
           <a href="{{ url_for('by_genre') }}"
-            ><div class="nav-btn">By Genre</div></a
+            ><div class="nav-btn"><span class="d-none d-lg-inline">By</span> Genre</div></a
           >
           <a href="{{ url_for('by_year') }}"
-            ><div class="nav-btn">By Year</div></a
+            ><div class="nav-btn"><span class="d-none d-lg-inline">By</span> Year</div></a
           >
           <a href="{{ url_for('by_rating') }}"
-            ><div class="nav-btn">By Rating</div></a
+            ><div class="nav-btn"><span class="d-none d-lg-inline">By</span> Rating</div></a
           >
         </div>
       </div>
