@@ -1,3 +1,28 @@
 {% extends 'base.html' %} {% block content %}
-<p style="font-size: 3rem"></p>
+<div class="row">
+    <div class="col-12 single_heading theme-font">
+        {{movie[1]}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6">
+        <img src="{{ movie[6]}}" alt="{{ movie[1]}} poster" class="single_image">
+    </div>
+    <div class="col-12 col-md-6">
+        <!-- MOVIE DETAILS -->
+        <!-- description -->
+        <p class="single_description">{{ movie[7]}}</p>
+        <!-- genre, year, rating, duration -->
+        <div class="d-flex justify-content-around">
+            <p>{{ movie[5]}}</p>
+            <p>{{ movie[2]}}</p>
+            <p>{{ movie[3]}}</p>
+            <p>{{ movie[4] }} mins</p>
+        </div>
+        <!-- Add to watchlist button -->
+        <div class="add_watchlist"> Add to Watchlist</div>
+
+
+    </div>
+</div>
 {% endblock %}

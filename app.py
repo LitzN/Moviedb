@@ -69,8 +69,8 @@ def by_rating():
                            movies=movies)
 
 
-@app.route("/<variable>/movie", methods=['GET', 'POST'])
-def movie(id):
-    cursor.execute(f'SELECT * FROM tblFilms WHERE filmID={id}')
+@app.route("/movie/<movie_id>", methods=['GET', 'POST'])
+def single_movie(movie_id):
+    cursor.execute(f'SELECT * FROM tblFilms WHERE filmID={movie_id}')
     movie = cursor.fetchone()
     return render_template('single_movie.html', movie=movie)

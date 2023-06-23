@@ -25,7 +25,7 @@
     <div class="d-flex justify-content-evenly align-items-stretch flex-wrap">
       {% for movie in movies %}
       <div class="card cards">
-        <a href="#">
+        <a href="{{ url_for('single_movie', movie_id=movie[0]) }}">
           <img class="card-img-top" src="{{movie[6]}}" alt="Card image cap" />
         </a>
         <div class="card-body d-flex justify-content-center align-items-center">

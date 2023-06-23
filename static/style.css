@@ -124,6 +124,27 @@ img{
     float:left;
 }
 
+.single_heading{
+    padding:2rem;
+    font-size:2rem;
+}
+
+.single_description{
+    padding:0 1rem;
+    padding-top:2rem;
+    text-align:justify;
+}
+
+.add_watchlist{
+    border:2px solid #00CECB;
+    color:aquamarine;
+    font-weight:bolder;
+    padding:1rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 3px 3px grey;
+}
+
 /*   TABLET   */
 @media only screen and (min-width: 600px) {
 
@@ -163,7 +184,10 @@ img{
         width:30%;
     }
 
-    
+    .single_description{
+        padding-top:0;
+        font-size:1.3rem;
+    }
 }
 
 @media only screen and (min-width:850px){
@@ -195,6 +219,14 @@ img{
     .cards{
         width:24%;
         margin-left: 0.3rem;
+    }
+
+    .single_description{
+        font-size:1.5rem;
+    }
+
+    img.single_image{
+        width:75%;
     }
 }
 
