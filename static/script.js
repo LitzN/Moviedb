@@ -58,3 +58,4 @@ for (i=0;i<ratingbtns.length; i++){
         }
     })
 }
+

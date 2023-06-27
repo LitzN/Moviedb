@@ -20,9 +20,10 @@
             <p>{{ movie[4] }} mins</p>
         </div>
         <!-- Add to watchlist button -->
-        <div class="add_watchlist"> Add to Watchlist</div>
-
+        <div class="{{ movie[0] }} add_watchlist" id="watch"> Add to Watchlist</div>
 
     </div>
 </div>
+<script src="../static/singlemovie-script.js"></script>
+
 {% endblock %}

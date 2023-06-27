@@ -1,7 +1,8 @@
-from flask import (Flask, render_template, redirect, url_for)
-
+from flask import (Flask, render_template, redirect, url_for, request)
+from localStoragePy import localStoragePy
 import sqlite3 as sql  # import sqlite module
 # create a connection object
+ 
 
 try:
     with sql.connect('filmflix.db', check_same_thread=False) as conn:
@@ -9,6 +10,8 @@ try:
         cursor = conn.cursor()
 except sql.OperationalError as e:
     print(f'Connection failed: {e}')
+
+localStorage = localStoragePy('moviedb-watchlist','text')
 
 app = Flask(__name__)
 
@@ -74,3 +77,15 @@ def single_movie(movie_id):
     cursor.execute(f'SELECT * FROM tblFilms WHERE filmID={movie_id}')
     movie = cursor.fetchone()
     return render_template('single_movie.html', movie=movie)
+
+@app.route("/watchlist", methods=["GET", "POST"])
+def watchlist():
+    if request.method == "POST":
+        favs = request.form['favs']
+        fav_movies = []
+        favlist = favs.split()
+        for fav in favlist:
+            cursor.execute(f'SELECT * FROM tblFilms WHERE filmID={fav}')
+            movie = cursor.fetchone()
+            fav_movies.append(movie)
+    return render_template('watchlist.html', fav_movies=fav_movies)

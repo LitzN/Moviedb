@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<p class="theme-font">watchlist</p>
+{% for fav in fav_movies %}
+<div class="row" id="{{fav[0]}}">
+    <div class="col-3">
+        <img src="{{fav[6]}}" alt="{{fav[1]}} poster">
+    </div>
+    <div class="col-6">
+        <p>{{fav[1]}} {{fav[2]}}</p>
+        <p>{{fav[7]}}</p>
+    </div>
+    <div class="col">
+        <p>{{fav[3]}}
+            {{fav[4]}}</p>
+        <a href="{{ url_for('single_movie', movie_id=fav[0])}}">View</a>
+        <button class="{{fav[0]}} remove_btn">
+            Remove
+        </button>
+    </div>
+</div>
+
+{% endfor %}
+
+<script src="../static/watchlist_script.js"></script>
+{% endblock %}

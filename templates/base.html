@@ -45,6 +45,10 @@
           <a href="{{ url_for('by_rating') }}"
             ><div class="nav-btn"><span class="d-none d-lg-inline">By</span> Rating</div></a
           >
+          <form id="sub_watchlist" action="{{ url_for('watchlist') }}" method="POST">
+            <input type="text" hidden id="movieList" name="favs">
+            <button type="submit">WATCHLIST</button>
+          </form>
         </div>
       </div>
       {% block content %} {% endblock %}
@@ -54,5 +58,8 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <script src="../static/script.js"></script>
+    <script>
+      document.getElementById('movieList').value = localStorage.getItem('favs');
+    </script>
   </body>
 </html>
