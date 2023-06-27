@@ -1,5 +1,4 @@
 from flask import (Flask, render_template, redirect, url_for, request)
-from localStoragePy import localStoragePy
 import sqlite3 as sql  # import sqlite module
 # create a connection object
  
@@ -11,7 +10,6 @@ try:
 except sql.OperationalError as e:
     print(f'Connection failed: {e}')
 
-localStorage = localStoragePy('moviedb-watchlist','text')
 
 app = Flask(__name__)
 
